@@ -159,6 +159,22 @@
                 <span class="material-symbols-outlined mr-3" data-icon="kebab_dining">kebab_dining</span>
                 <span>Cerdo</span>
             </a>
+            <a class="text-white/80 hover:bg-white/20 hover:text-white flex items-center px-4 py-3 hover:translate-x-2 transition-all rounded-xl font-body font-medium" href="#res">
+                <span class="material-symbols-outlined mr-3" data-icon="set_meal">set_meal</span>
+                <span>Carne de Res</span>
+            </a>
+            <a class="text-white/80 hover:bg-white/20 hover:text-white flex items-center px-4 py-3 hover:translate-x-2 transition-all rounded-xl font-body font-medium" href="#embutidos">
+                <span class="material-symbols-outlined mr-3" data-icon="breakfast_dining">breakfast_dining</span>
+                <span>Embutidos</span>
+            </a>
+            <a class="text-white/80 hover:bg-white/20 hover:text-white flex items-center px-4 py-3 hover:translate-x-2 transition-all rounded-xl font-body font-medium" href="#aceites">
+                <span class="material-symbols-outlined mr-3" data-icon="water_drop">water_drop</span>
+                <span>Aceites</span>
+            </a>
+            <a class="text-white/80 hover:bg-white/20 hover:text-white flex items-center px-4 py-3 hover:translate-x-2 transition-all rounded-xl font-body font-medium" href="#pastas">
+                <span class="material-symbols-outlined mr-3" data-icon="ramen_dining">ramen_dining</span>
+                <span>Pastas</span>
+            </a>
             <a class="text-white/80 hover:bg-white/20 hover:text-white flex items-center px-4 py-3 hover:translate-x-2 transition-all rounded-xl font-body font-medium" href="#ubicanos">
                 <span class="material-symbols-outlined mr-3" data-icon="location_on">location_on</span>
                 <span>Ubícanos</span>
@@ -383,6 +399,187 @@
                                 </div>
                                 <button onclick="addToCart('Costillas de Cerdo', 22, 'https://lh3.googleusercontent.com/aida-public/AB6AXuCh1KKR0mrf7I_Ae1CKuWF1z5QOzK9KaDWAUkGD6myWCeJnQUGb1tDy6qCa1f7pcp3j79svN8mtaJ6mOOwmu-Wd9RhQCWW4_8Vrz8NJ-4Bv1kTJ7xpGA9HqKWCU6ElNPMA2KqUv022r2TDBPHmU3fUT-Rydo84Gr-9CbwX1Qr0-5toQ0NJqyHLPv2vewbSvVDVsJQcKn3k93jwnsfbktvi3QV-Rd2QIvNChXHhSdEsLKNLpuCENHAuDAfZKr5qiCp6j68wc6s0Kfws')" class="bg-yellow-brand text-navy w-14 h-14 md:w-16 md:h-16 rounded-2xl hover:rounded-[50%] hover:bg-white transition-all duration-300 shadow-[0_15px_30px_rgba(255,204,0,0.4)] flex items-center justify-center active:scale-90">
                                     <span class="material-symbols-outlined text-2xl md:text-3xl font-bold" data-icon="add">add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Carne de Res Section -->
+            <section class="scroll-mt-32 opacity-0 scroll-reveal" id="res">
+                <div class="flex items-center justify-between mb-8">
+                    <h3 class="text-3xl md:text-5xl font-black font-headline text-white drop-shadow-md">Carne de Res (Corte Characato)</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                    <!-- Product 1: Malaya -->
+                    <div class="bg-navy/80 border border-white/20 rounded-[2rem] overflow-hidden hover:border-yellow-brand transition-all duration-300 transform hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(255,204,0,0.2)] backdrop-blur-3xl group">
+                        <div class="relative h-48 md:h-64 overflow-hidden mask-image-b bg-gradient-to-t from-navy/80 to-transparent">
+                            <span class="absolute top-4 right-4 bg-yellow-brand text-navy text-xs font-black px-3 py-1 rounded-full z-10 shadow-lg tracking-widest uppercase">Especial Arequipeño</span>
+                            <div class="absolute inset-0 bg-navy/20 group-hover:bg-transparent transition-colors z-0"></div>
+                            <img alt="Malaya Fina Arequipeña" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 mix-blend-luminosity hover:mix-blend-normal" src="https://images.unsplash.com/photo-1603048297172-c92544798d5e?w=800&q=80"/>
+                        </div>
+                        <div class="p-6 md:p-8 relative">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="text-xl md:text-2xl font-bold font-headline text-white">Malaya Fina</h4>
+                            </div>
+                            <p class="text-white/70 text-sm md:text-base font-body mb-6 font-light">Corte perfecto para preparar el tradicional plato characato con papa hornada. Jugoso y de rápida cocción.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex flex-col">
+                                    <span class="text-white/50 text-xs uppercase tracking-widest mb-1">Precio por Libra</span>
+                                    <span class="text-2xl md:text-3xl font-black text-white">S/ 24.50</span>
+                                </div>
+                                <button onclick="addToCart('p-res-1', 'Malaya Fina', 24.50, 'https://images.unsplash.com/photo-1603048297172-c92544798d5e?w=800&q=80')" class="bg-white/10 hover:bg-yellow-brand text-white hover:text-navy p-3 md:p-4 rounded-2xl transition-all duration-300 shadow-lg active:scale-95 group">
+                                    <span class="material-symbols-outlined text-xl md:text-2xl group-hover:rotate-12 transition-transform" data-icon="add_shopping_cart">add_shopping_cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 2: Costillar -->
+                    <div class="bg-navy/80 border border-white/20 rounded-[2rem] overflow-hidden hover:border-yellow-brand transition-all duration-300 transform hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(255,204,0,0.2)] backdrop-blur-3xl group">
+                        <div class="relative h-48 md:h-64 overflow-hidden mask-image-b bg-gradient-to-t from-navy/80 to-transparent">
+                            <div class="absolute inset-0 bg-navy/20 group-hover:bg-transparent transition-colors z-0"></div>
+                            <img alt="Costillar de Res Premium" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 mix-blend-luminosity hover:mix-blend-normal" src="https://images.unsplash.com/photo-1558030006-450675393462?w=800&q=80"/>
+                        </div>
+                        <div class="p-6 md:p-8 relative">
+                            <h4 class="text-xl md:text-2xl font-bold font-headline text-white mb-2">Costillar Cervecero</h4>
+                            <p class="text-white/70 text-sm md:text-base font-body mb-6 font-light">Costillar entero importado ideal para parrilla a fuego lento o adobado.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex flex-col">
+                                    <span class="text-white/50 text-xs uppercase tracking-widest mb-1">Precio por Libra</span>
+                                    <span class="text-2xl md:text-3xl font-black text-white">S/ 32.90</span>
+                                </div>
+                                <button onclick="addToCart('p-res-2', 'Costillar Cervecero', 32.90, 'https://images.unsplash.com/photo-1558030006-450675393462?w=800&q=80')" class="bg-white/10 hover:bg-yellow-brand text-white hover:text-navy p-3 md:p-4 rounded-2xl transition-all duration-300 shadow-lg active:scale-95 group">
+                                    <span class="material-symbols-outlined text-xl md:text-2xl group-hover:rotate-12 transition-transform" data-icon="add_shopping_cart">add_shopping_cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Embutidos Section -->
+            <section class="scroll-mt-32 opacity-0 scroll-reveal" id="embutidos">
+                <div class="flex items-center justify-between mb-8">
+                    <h3 class="text-3xl md:text-5xl font-black font-headline text-white drop-shadow-md">Embutidos y Salchichas</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                    <!-- Product 1: Salchicha Arequipeña -->
+                    <div class="bg-navy/80 border border-white/20 rounded-[2rem] overflow-hidden hover:border-yellow-brand transition-all duration-300 transform hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(255,204,0,0.2)] backdrop-blur-3xl group">
+                        <div class="relative h-48 md:h-64 overflow-hidden mask-image-b bg-gradient-to-t from-navy/80 to-transparent">
+                            <span class="absolute top-4 left-4 bg-red-600 text-white text-xs font-black px-3 py-1 rounded-full z-10 shadow-lg tracking-widest uppercase">Receta Original</span>
+                            <div class="absolute inset-0 bg-navy/20 group-hover:bg-transparent transition-colors z-0"></div>
+                            <img alt="Salchicha Arequipeña" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 mix-blend-luminosity hover:mix-blend-normal" src="https://images.unsplash.com/photo-1585325701165-351af916e581?w=800&q=80"/>
+                        </div>
+                        <div class="p-6 md:p-8 relative">
+                            <h4 class="text-xl md:text-2xl font-bold font-headline text-white mb-2">Salchicha Arequipeña</h4>
+                            <p class="text-white/70 text-sm md:text-base font-body mb-6 font-light">Embutido tradicional arequipeño bañado con la receta original de especias y ajo characato. Ideal revuelto con huevos.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex flex-col">
+                                    <span class="text-white/50 text-xs uppercase tracking-widest mb-1">PQTE X 500G</span>
+                                    <span class="text-2xl md:text-3xl font-black text-white">S/ 18.00</span>
+                                </div>
+                                <button onclick="addToCart('p-emb-1', 'Salchicha Arequipeña', 18.00, 'https://images.unsplash.com/photo-1585325701165-351af916e581?w=800&q=80')" class="bg-white/10 hover:bg-yellow-brand text-white hover:text-navy p-3 md:p-4 rounded-2xl transition-all duration-300 shadow-lg active:scale-95 group">
+                                    <span class="material-symbols-outlined text-xl md:text-2xl group-hover:rotate-12 transition-transform" data-icon="add_shopping_cart">add_shopping_cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 2: Chorizo -->
+                    <div class="bg-navy/80 border border-white/20 rounded-[2rem] overflow-hidden hover:border-yellow-brand transition-all duration-300 transform hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(255,204,0,0.2)] backdrop-blur-3xl group">
+                        <div class="relative h-48 md:h-64 overflow-hidden mask-image-b bg-gradient-to-t from-navy/80 to-transparent">
+                            <div class="absolute inset-0 bg-navy/20 group-hover:bg-transparent transition-colors z-0"></div>
+                            <img alt="Chorizo Especial Parillero" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 mix-blend-luminosity hover:mix-blend-normal" src="https://images.unsplash.com/photo-1595166299878-577e172e259e?w=800&q=80"/>
+                        </div>
+                        <div class="p-6 md:p-8 relative">
+                            <h4 class="text-xl md:text-2xl font-bold font-headline text-white mb-2">Chorizo Parrillero</h4>
+                            <p class="text-white/70 text-sm md:text-base font-body mb-6 font-light">Chorizo grueso relleno 100% ahumado para parrillas familiares.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex flex-col">
+                                    <span class="text-white/50 text-xs uppercase tracking-widest mb-1">PQTE 6 UNIDADES</span>
+                                    <span class="text-2xl md:text-3xl font-black text-white">S/ 12.50</span>
+                                </div>
+                                <button onclick="addToCart('p-emb-2', 'Chorizo Parrillero Rico', 12.50, 'https://images.unsplash.com/photo-1595166299878-577e172e259e?w=800&q=80')" class="bg-white/10 hover:bg-yellow-brand text-white hover:text-navy p-3 md:p-4 rounded-2xl transition-all duration-300 shadow-lg active:scale-95 group">
+                                    <span class="material-symbols-outlined text-xl md:text-2xl group-hover:rotate-12 transition-transform" data-icon="add_shopping_cart">add_shopping_cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Aceites Section -->
+            <section class="scroll-mt-32 opacity-0 scroll-reveal" id="aceites">
+                <div class="flex items-center justify-between mb-8">
+                    <h3 class="text-3xl md:text-5xl font-black font-headline text-white drop-shadow-md">Aceites</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                    <!-- Product 1: Aceite Primor -->
+                    <div class="bg-navy/80 border border-white/20 rounded-[2rem] overflow-hidden hover:border-yellow-brand transition-all duration-300 transform hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(255,204,0,0.2)] backdrop-blur-3xl group">
+                        <div class="relative h-48 md:h-64 overflow-hidden mask-image-b bg-gradient-to-t from-navy/80 to-transparent">
+                            <span class="absolute top-4 left-4 bg-yellow-brand text-navy text-xs font-black px-3 py-1 rounded-full z-10 shadow-lg tracking-widest uppercase">Premium</span>
+                            <div class="absolute inset-0 bg-navy/20 group-hover:bg-transparent transition-colors z-0"></div>
+                            <img alt="Aceite Primor 1L" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 mix-blend-luminosity hover:mix-blend-normal" src="https://images.unsplash.com/photo-1474926256705-592b217e29bb?w=800&q=80"/>
+                        </div>
+                        <div class="p-6 md:p-8 relative">
+                            <h4 class="text-xl md:text-2xl font-bold font-headline text-white mb-2">Aceite Primor</h4>
+                            <p class="text-white/70 text-sm md:text-base font-body mb-6 font-light">Aceite vegetal Premium Primor puro para dorar lomos y freír las mejores papas peruanas.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex flex-col">
+                                    <span class="text-white/50 text-xs uppercase tracking-widest mb-1">Botella x 1 Litro</span>
+                                    <span class="text-2xl md:text-3xl font-black text-white">S/ 9.80</span>
+                                </div>
+                                <button onclick="addToCart('p-ace-1', 'Aceite Primor 1L', 9.80, 'https://images.unsplash.com/photo-1474926256705-592b217e29bb?w=800&q=80')" class="bg-white/10 hover:bg-yellow-brand text-white hover:text-navy p-3 md:p-4 rounded-2xl transition-all duration-300 shadow-lg active:scale-95 group">
+                                    <span class="material-symbols-outlined text-xl md:text-2xl group-hover:rotate-12 transition-transform" data-icon="add_shopping_cart">add_shopping_cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pastas Section -->
+            <section class="scroll-mt-32 opacity-0 scroll-reveal pb-8" id="pastas">
+                <div class="flex items-center justify-between mb-8">
+                    <h3 class="text-3xl md:text-5xl font-black font-headline text-white drop-shadow-md">Pastas y Fideos</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                    <!-- Product 1: Don Vittorio -->
+                    <div class="bg-navy/80 border border-white/20 rounded-[2rem] overflow-hidden hover:border-yellow-brand transition-all duration-300 transform hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(255,204,0,0.2)] backdrop-blur-3xl group">
+                        <div class="relative h-48 md:h-64 overflow-hidden mask-image-b bg-gradient-to-t from-navy/80 to-transparent">
+                            <div class="absolute inset-0 bg-navy/20 group-hover:bg-transparent transition-colors z-0"></div>
+                            <img alt="Fideos Don Vittorio" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 mix-blend-luminosity hover:mix-blend-normal" src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=800&q=80"/>
+                        </div>
+                        <div class="p-6 md:p-8 relative">
+                            <h4 class="text-xl md:text-2xl font-bold font-headline text-white mb-2">Tallarín Don Vittorio</h4>
+                            <p class="text-white/70 text-sm md:text-base font-body mb-6 font-light">Fideos clásicos delantales amarillos rinden mucho, un infaltable para el tallarín saltado c/ carne.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex flex-col">
+                                    <span class="text-white/50 text-xs uppercase tracking-widest mb-1">Paquete x 500g</span>
+                                    <span class="text-2xl md:text-3xl font-black text-white">S/ 4.50</span>
+                                </div>
+                                <button onclick="addToCart('p-pas-1', 'Tallarín Don Vittorio', 4.50, 'https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=800&q=80')" class="bg-white/10 hover:bg-yellow-brand text-white hover:text-navy p-3 md:p-4 rounded-2xl transition-all duration-300 shadow-lg active:scale-95 group">
+                                    <span class="material-symbols-outlined text-xl md:text-2xl group-hover:rotate-12 transition-transform" data-icon="add_shopping_cart">add_shopping_cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Product 2: Macarrones -->
+                    <div class="bg-navy/80 border border-white/20 rounded-[2rem] overflow-hidden hover:border-yellow-brand transition-all duration-300 transform hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(255,204,0,0.2)] backdrop-blur-3xl group">
+                        <div class="relative h-48 md:h-64 overflow-hidden mask-image-b bg-gradient-to-t from-navy/80 to-transparent">
+                            <div class="absolute inset-0 bg-navy/20 group-hover:bg-transparent transition-colors z-0"></div>
+                            <img alt="Macarrones" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 mix-blend-luminosity hover:mix-blend-normal" src="https://images.unsplash.com/photo-1620216773322-2615418af886?w=800&q=80"/>
+                        </div>
+                        <div class="p-6 md:p-8 relative">
+                            <h4 class="text-xl md:text-2xl font-bold font-headline text-white mb-2">Macarrón Don Vittorio</h4>
+                            <p class="text-white/70 text-sm md:text-base font-body mb-6 font-light">Fideos tubo hueco corto para sopas de asado y guisos potentes.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex flex-col">
+                                    <span class="text-white/50 text-xs uppercase tracking-widest mb-1">Paquete x 250g</span>
+                                    <span class="text-2xl md:text-3xl font-black text-white">S/ 2.50</span>
+                                </div>
+                                <button onclick="addToCart('p-pas-2', 'Macarrón Don Vittorio', 2.50, 'https://images.unsplash.com/photo-1620216773322-2615418af886?w=800&q=80')" class="bg-white/10 hover:bg-yellow-brand text-white hover:text-navy p-3 md:p-4 rounded-2xl transition-all duration-300 shadow-lg active:scale-95 group">
+                                    <span class="material-symbols-outlined text-xl md:text-2xl group-hover:rotate-12 transition-transform" data-icon="add_shopping_cart">add_shopping_cart</span>
                                 </button>
                             </div>
                         </div>
