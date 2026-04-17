@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <!-- CSP Security Meta Tag (Demo Mode) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https:;">
     <title>Rico - El Maestro Carnicero | Arequipa</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
@@ -59,6 +61,13 @@
         .cart-badge {
             transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
+        
+        /* Anti-Selection styling measure */
+        body {
+            -webkit-user-select: none; /* Safari */
+            -ms-user-select: none; /* IE 10 and IE 11 */
+            user-select: none; /* Standard syntax */
+        }
     </style>
 </head>
 <body class="text-white font-body antialiased flex relative min-h-screen overflow-x-hidden">
@@ -75,8 +84,8 @@
 
     <!-- SideNavBar -->
     <nav class="hidden lg:flex flex-col p-4 space-y-2 h-screen w-64 border-r border-white/10 bg-navy/80 xl:bg-navy/40 backdrop-blur-xl text-white sticky top-0 shrink-0 shadow-[20px_0_40px_rgba(0,0,0,0.3)] z-40">
-        <div class="mb-8 px-4 py-2 hover:scale-105 transition-transform duration-300">
-            <img alt="Rico Logo" class="h-16 w-auto mb-2 object-contain drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)]" src="https://lh3.googleusercontent.com/aida/ADBb0ujCEg1tTzCdjF9WW9e0XebstbuW5EF_rt15Od_YrP8BdJSJkD14V2KsVYB5hHo7nvRR1xwayhBc0FvLmxNHkw_F3y5AhNWqObTyvfMrvbPz5cp7-zR-tUWwVW8l_wMVKRrjbiPMYnJz4hSyW7XYfX1i6xufZej698MMSHS4h_-ih5zNfwE5XZywxxrixiCMmBUxXjIMGYssKSBtMoNjhS5mBQhew_dxLh58EqHjbrFdSMFxYxP9HCWeG32sP3bueKMCd63_4bU5"/>
+        <div class="mb-8 px-4 py-2 hover:scale-105 transition-transform duration-300 pointer-events-none">
+            <img alt="Rico Logo" class="h-16 w-auto mb-2 object-contain drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)] pointer-events-auto" src="https://lh3.googleusercontent.com/aida/ADBb0ujCEg1tTzCdjF9WW9e0XebstbuW5EF_rt15Od_YrP8BdJSJkD14V2KsVYB5hHo7nvRR1xwayhBc0FvLmxNHkw_F3y5AhNWqObTyvfMrvbPz5cp7-zR-tUWwVW8l_wMVKRrjbiPMYnJz4hSyW7XYfX1i6xufZej698MMSHS4h_-ih5zNfwE5XZywxxrixiCMmBUxXjIMGYssKSBtMoNjhS5mBQhew_dxLh58EqHjbrFdSMFxYxP9HCWeG32sP3bueKMCd63_4bU5"/>
         </div>
         <div class="flex-1 space-y-3">
             <a class="bg-yellow-brand text-navy rounded-xl font-bold flex items-center px-4 py-3 hover:scale-105 shadow-[0_5px_15px_rgba(255,204,0,0.4)] transition-all font-body" href="#">
@@ -161,8 +170,8 @@
                     <div class="min-w-full h-full relative" style="flex: 0 0 100%;">
                         <div class="absolute inset-0 bg-gradient-to-r from-red-600 to-red-900 opacity-80 mix-blend-multiply"></div>
                         <img class="absolute inset-0 w-full h-full object-cover z-[-1]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB34aGp8ixrBJmxoX8pjoBxMTQe4ce0rGB84dDxq98yv1ZoocNumPd-rLDWJuCENDvuXkGgnVcTj7G1KhyjXtOAHMitKknn558h9pKuG57qZhIWLsNaTx7HmwxTztoucfYFOu5mEWrGq6jJFFsOCA-uK--E8CJ4OlUpyt03prbNgsk4JDaEqiletR-EY2ABCXfpcWsKY0m7Ps0pHElW-eJ8A5_vhtKVRjNAlCpN382QUsGYZ8Gndlni5orciNx0Paqxx3uMczvJZLM"/>
-                        <div class="relative z-10 flex flex-col justify-center h-full p-10 md:p-16">
-                            <span class="bg-yellow-brand text-navy text-xs font-black px-4 py-2 rounded-xl uppercase tracking-widest inline-block w-max mb-4 shadow-lg">Oferta del Día</span>
+                        <div class="relative z-10 flex flex-col justify-center h-full p-10 md:p-16 pointer-events-none">
+                            <span class="bg-yellow-brand text-navy text-xs font-black px-4 py-2 rounded-xl uppercase tracking-widest inline-block w-max mb-4 shadow-lg pointer-events-auto">Oferta del Día</span>
                             <h3 class="text-3xl md:text-5xl lg:text-6xl font-black text-white font-headline drop-shadow-md">2x1 en Pollos Enteros</h3>
                             <p class="text-white/90 font-body text-lg mt-2 font-medium">Solo por hoy en locales seleccionados.</p>
                         </div>
@@ -171,8 +180,8 @@
                     <div class="min-w-full h-full relative" style="flex: 0 0 100%;">
                         <div class="absolute inset-0 bg-gradient-to-r from-[#0a0026] to-navy opacity-80 mix-blend-multiply"></div>
                         <img class="absolute inset-0 w-full h-full object-cover z-[-1]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh1KKR0mrf7I_Ae1CKuWF1z5QOzK9KaDWAUkGD6myWCeJnQUGb1tDy6qCa1f7pcp3j79svN8mtaJ6mOOwmu-Wd9RhQCWW4_8Vrz8NJ-4Bv1kTJ7xpGA9HqKWCU6ElNPMA2KqUv022r2TDBPHmU3fUT-Rydo84Gr-9CbwX1Qr0-5toQ0NJqyHLPv2vewbSvVDVsJQcKn3k93jwnsfbktvi3QV-Rd2QIvNChXHhSdEsLKNLpuCENHAuDAfZKr5qiCp6j68wc6s0Kfws"/>
-                        <div class="relative z-10 flex flex-col justify-center h-full p-10 md:p-16">
-                            <span class="bg-yellow-brand text-navy text-xs font-black px-4 py-2 rounded-xl uppercase tracking-widest inline-block w-max mb-4 shadow-lg">Fin de Semana</span>
+                        <div class="relative z-10 flex flex-col justify-center h-full p-10 md:p-16 pointer-events-none">
+                            <span class="bg-yellow-brand text-navy text-xs font-black px-4 py-2 rounded-xl uppercase tracking-widest inline-block w-max mb-4 shadow-lg pointer-events-auto">Fin de Semana</span>
                             <h3 class="text-3xl md:text-5xl lg:text-6xl font-black text-white font-headline drop-shadow-md">-30% en Cortes Premium</h3>
                             <p class="text-white/90 font-body text-lg mt-2 font-medium">Costillas y chuletas para tu parrilla.</p>
                         </div>
@@ -181,8 +190,8 @@
                     <div class="min-w-full h-full relative" style="flex: 0 0 100%;">
                         <div class="absolute inset-0 bg-gradient-to-r from-yellow-600 to-yellow-900 opacity-80 mix-blend-multiply"></div>
                         <img class="absolute inset-0 w-full h-full object-cover z-[-1]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEkPXHhSLtxwZyVKyIpEtegpGJGZqLxpgu6B-NsgML2LWMOIfz9ZzHl6dXhElDzITS17qZvX60-n3LTNzoSQeLJ9rVAjfMQp4NbrLYacskpViWa_TCCZcYti1piy22ffyETW18TDMpDW5zaSuGy4HBk3Pgmb6I1zuNwtukFZGtxiZViICFOQyWj1rCQR0Tepu2XlletDKAjIfgZ4o4OZsqHT50Kmli9q3EW2nFD6BN_gxZJ-vSjUyG0D0Mky2Cmu40VdGD9Qr-WdE"/>
-                        <div class="relative z-10 flex flex-col justify-center h-full p-10 md:p-16">
-                            <span class="bg-navy text-yellow-brand border border-yellow-brand text-xs font-black px-4 py-2 rounded-xl uppercase tracking-widest inline-block w-max mb-4 shadow-lg">Novedad</span>
+                        <div class="relative z-10 flex flex-col justify-center h-full p-10 md:p-16 pointer-events-none">
+                            <span class="bg-navy text-yellow-brand border border-yellow-brand text-xs font-black px-4 py-2 rounded-xl uppercase tracking-widest inline-block w-max mb-4 shadow-lg pointer-events-auto">Novedad</span>
                             <h3 class="text-3xl md:text-5xl lg:text-6xl font-black text-white font-headline drop-shadow-md">Delivery Gratis</h3>
                             <p class="text-white/90 font-body text-lg mt-2 font-medium">Por compras mayores a S/100 en la app.</p>
                         </div>
@@ -209,10 +218,10 @@
         <!-- Payment Methods Infinite Marquee -->
         <div class="w-full bg-navy/60 backdrop-blur-xl border-y border-white/10 py-5 overflow-hidden shadow-2xl relative mb-24 opacity-0 scroll-reveal">
             <!-- Fade masks -->
-            <div class="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-navy to-transparent z-10"></div>
-            <div class="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-navy to-transparent z-10"></div>
+            <div class="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-navy to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-navy to-transparent z-10 pointer-events-none"></div>
             
-            <div class="flex animate-marquee min-w-max text-white/90 font-body font-medium text-lg lg:text-xl items-center">
+            <div class="flex animate-marquee min-w-max text-white/90 font-body font-medium text-lg lg:text-xl items-center pointer-events-none">
                 <!-- Repeated Sequence (Double for seamless loop) -->
                 <div class="flex items-center px-10 gap-3 border-r border-white/10">
                     <span class="bg-[#00579F] text-white rounded font-bold px-3 py-1 font-headline tracking-wider text-sm shadow-[0_0_10px_rgba(0,87,159,0.5)]">VISA</span>
@@ -266,7 +275,7 @@
                     <div class="bg-white/5 backdrop-blur-xl rounded-[2rem] overflow-hidden group hover:-translate-y-2 transition-all duration-300 border border-white/20 shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_50px_rgba(255,204,0,0.2)] flex flex-col">
                         <div class="h-72 overflow-hidden relative">
                             <img alt="Pollo Entero" class="w-full h-full object-cover shadow-2xl group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB34aGp8ixrBJmxoX8pjoBxMTQe4ce0rGB84dDxq98yv1ZoocNumPd-rLDWJuCENDvuXkGgnVcTj7G1KhyjXtOAHMitKknn558h9pKuG57qZhIWLsNaTx7HmwxTztoucfYFOu5mEWrGq6jJFFsOCA-uK--E8CJ4OlUpyt03prbNgsk4JDaEqiletR-EY2ABCXfpcWsKY0m7Ps0pHElW-eJ8A5_vhtKVRjNAlCpN382QUsGYZ8Gndlni5orciNx0Paqxx3uMczvJZLM"/>
-                            <div class="absolute top-4 left-4 bg-yellow-brand text-navy text-xs font-black px-4 py-2 rounded-xl uppercase tracking-widest font-body shadow-[0_5px_15px_rgba(0,0,0,0.5)]">Destacado</div>
+                            <div class="absolute top-4 left-4 bg-yellow-brand text-navy text-xs font-black px-4 py-2 rounded-xl uppercase tracking-widest font-body shadow-[0_5px_15px_rgba(0,0,0,0.5)] pointer-events-none">Destacado</div>
                             <div class="absolute inset-0 bg-gradient-to-t from-navy to-transparent opacity-80 pointer-events-none"></div>
                         </div>
                         <div class="p-8 flex-1 flex flex-col justify-between -mt-20 relative z-10 pointer-events-none">
@@ -461,7 +470,7 @@
                     <!-- Map Embed -->
                     <div class="h-[500px] lg:h-auto min-h-[500px] bg-white/10 rounded-3xl p-3 border border-white/20 relative shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex flex-col group pointer-events-none sm:pointer-events-auto">
                         <iframe 
-                            class="w-full h-full rounded-2xl grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" 
+                            class="w-full h-full rounded-2xl grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 hover:shadow-[0_0_30px_rgba(255,204,0,0.3)]" 
                             src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d15309.284090906232!2d-71.536961!3d-16.4!3m2!1i1024!2i768!4f13.1!2m1!1sTiendas+Rico+Pollo+Arequipa!5e0!3m2!1ses!2spe!4v1700000000000!5m2!1ses!2spe" 
                             style="border:0;" 
                             allowfullscreen="" 
@@ -572,10 +581,74 @@
                 <span class="text-white/80 font-medium">Subtotal:</span>
                 <span class="font-black font-headline text-3xl text-yellow-brand drop-shadow" id="cart-total">S/0.00</span>
             </div>
-            <button class="w-full bg-yellow-brand text-navy hover:bg-white font-black py-4 rounded-xl shadow-[0_10px_20px_rgba(255,204,0,0.3)] hover:shadow-[0_15px_30px_rgba(255,255,255,0.4)] active:scale-95 transition-all flex justify-center items-center gap-2 group">
-                Proceder al Pago
-                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">payments</span>
+            <button onclick="openCheckout()" class="w-full bg-yellow-brand text-navy hover:bg-white font-black py-4 rounded-xl shadow-[0_10px_20px_rgba(255,204,0,0.3)] hover:shadow-[0_15px_30px_rgba(255,255,255,0.4)] active:scale-95 transition-all flex justify-center items-center gap-2 group">
+                Proceder al Pago Seguro
+                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">lock</span>
             </button>
+        </div>
+    </div>
+
+    <!-- Secure Checkout Modal (Simulation) -->
+    <div id="checkout-overlay" class="fixed inset-0 bg-navy/80 backdrop-blur-md z-[90] opacity-0 pointer-events-none transition-all duration-300 flex items-center justify-center p-4">
+        <div id="checkout-box" class="bg-[#0a0026] border border-white/20 shadow-[0_30px_60px_rgba(0,0,0,0.8)] rounded-3xl w-full max-w-lg overflow-hidden transform scale-95 transition-all duration-300 p-8 relative">
+            <button type="button" onclick="closeCheckout(false)" class="absolute top-6 right-6 text-white/50 hover:text-white transition-colors cursor-pointer"><span class="material-symbols-outlined text-2xl">close</span></button>
+            
+            <div class="flex items-center gap-3 mb-6">
+                <span class="material-symbols-outlined text-green-500 text-3xl drop-shadow-[0_0_10px_rgba(34,197,94,0.5)]">security</span>
+                <div>
+                    <h3 class="text-2xl font-black font-headline text-white">Pago Seguro</h3>
+                    <p class="text-[10px] sm:text-xs text-green-400 font-bold uppercase tracking-widest flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">lock</span> Encriptación 256-Bit SSL</p>
+                </div>
+            </div>
+            
+            <form id="checkout-form" class="space-y-5" onsubmit="processPayment(event)">
+                <div>
+                    <label class="block text-xs font-bold text-white/70 mb-2 uppercase tracking-widest">Nombre en la Tarjeta</label>
+                    <input required class="w-full bg-white/5 text-white border border-white/20 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 font-body transition-all shadow-inner" type="text" placeholder="Ej. Juan Pérez">
+                </div>
+                
+                <div>
+                    <label class="block text-xs font-bold text-white/70 mb-2 uppercase tracking-widest">Número de Tarjeta</label>
+                    <div class="relative">
+                        <input id="card-input" required maxlength="19" class="w-full bg-white/5 text-white border border-white/20 rounded-xl pl-12 pr-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 font-body transition-all font-mono tracking-widest text-lg shadow-inner" type="text" placeholder="0000 0000 0000 0000" autocomplete="off">
+                        <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-white/50">credit_card</span>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-5">
+                    <div>
+                        <label class="block text-xs font-bold text-white/70 mb-2 uppercase tracking-widest">Expiración</label>
+                        <input id="exp-input" required maxlength="5" class="w-full bg-white/5 text-white border border-white/20 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 font-body transition-all font-mono text-center tracking-widest shadow-inner relative" type="text" placeholder="MM/YY">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-white/70 mb-2 uppercase tracking-widest">Código CVC</label>
+                        <input required maxlength="4" class="w-full bg-white/5 text-white border border-white/20 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 font-body transition-all font-mono text-center tracking-widest shadow-inner security-disc" type="password" placeholder="***">
+                    </div>
+                </div>
+                
+                <div class="pt-6 border-t border-white/10 mt-6 flex justify-between items-center">
+                    <span class="text-white/60 text-sm font-medium">Total a cobrar:</span>
+                    <span id="checkout-total" class="font-black font-headline text-3xl text-yellow-brand drop-shadow">S/0.00</span>
+                </div>
+                
+                <button type="submit" id="pay-btn" class="w-full bg-green-600 border border-green-400 text-white hover:bg-green-500 font-black py-4 rounded-xl shadow-[0_10px_20px_rgba(22,163,74,0.3)] hover:shadow-[0_15px_30px_rgba(22,163,74,0.5)] transition-all flex justify-center items-center gap-2 mt-4 active:scale-95 text-lg">
+                    <span id="pay-btn-text">Autorizar Pago Seguramente</span>
+                    <span id="pay-btn-icon" class="material-symbols-outlined">shield</span>
+                </button>
+                <div class="text-center mt-3 flex items-center justify-center gap-2 text-white/40 text-xs">
+                    <span class="material-symbols-outlined text-sm">verified_user</span> PCI-DSS Compliant Gateway
+                </div>
+            </form>
+            
+            <!-- Success State Hidden by Default -->
+            <div id="checkout-success" class="absolute inset-0 bg-[#0a0026]/95 backdrop-blur-xl flex flex-col items-center justify-center p-8 text-center opacity-0 pointer-events-none transition-opacity duration-300 z-10 rounded-3xl">
+                <div class="w-24 h-24 bg-green-500 rounded-full flex items-center justify-center mb-6 shadow-[0_0_50px_rgba(34,197,94,0.6)]">
+                    <span class="material-symbols-outlined text-white text-6xl">check_circle</span>
+                </div>
+                <h3 class="text-3xl font-black font-headline text-white mb-3">¡Pago Exitoso!</h3>
+                <p class="text-white/80 font-body text-lg leading-relaxed mix-blend-screen">Tu transacción fue cifrada y procesada exitosamente.</p>
+                <button onclick="closeCheckout(true)" class="mt-10 border border-white/20 text-white hover:bg-white hover:text-navy px-10 py-4 rounded-full font-bold transition-all active:scale-95 shadow-lg">Volver a la Tienda</button>
+            </div>
         </div>
     </div>
 
@@ -584,6 +657,27 @@
 
     <!-- Custom Script for Animations & Functional Scroll/Cart -->
     <script>
+        // --- ANTI THEFT MECHANICS ---
+        // Block Right Click
+        document.addEventListener('contextmenu', e => {
+            e.preventDefault();
+            showToast("Click derecho deshabilitado por razones de seguridad", "bg-red-600");
+        });
+        
+        // Block Dragging (especially images)
+        document.addEventListener('dragstart', e => {
+            if(e.target.tagName === 'IMG') e.preventDefault();
+        });
+        
+        // Block developer tools shortcuts visually (F12, Ctrl+Shift+I, Ctrl+U)
+        document.addEventListener('keydown', e => {
+            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'C')) || (e.ctrlKey && e.key === 'U')) {
+                e.preventDefault();
+                showToast("Acción de desarrollador bloqueada 🛡️", "bg-red-600");
+            }
+        });
+
+        // --- GENERAL UI LOGIC ---
         document.addEventListener("DOMContentLoaded", () => {
             // Intersection Observer for Scroll Reveal
             const observerOptions = {
@@ -687,6 +781,7 @@
         
         // --- SHOPPING CART STATE & LOGIC ---
         let cart = [];
+        let cartTotalVal = 0;
         
         function toggleCart() {
             const panel = document.getElementById('cart-panel');
@@ -708,7 +803,7 @@
             const badges = document.querySelectorAll('.cart-badge'); 
             
             // Calc totals
-            let total = 0;
+            cartTotalVal = 0;
             let count = 0;
             
             // Re-render items
@@ -724,7 +819,7 @@
                 `;
             } else {
                 cart.forEach((item, index) => {
-                    total += item.price * item.quantity;
+                    cartTotalVal += item.price * item.quantity;
                     count += item.quantity;
                     
                     const el = document.createElement('div');
@@ -748,18 +843,16 @@
             }
             
             // Set strings with precise fixed decimals
-            totalEl.innerText = `S/${total.toFixed(2)}`;
+            totalEl.innerText = `S/${cartTotalVal.toFixed(2)}`;
             
             // Pop the badges
             badges.forEach(b => {
                 b.innerText = count;
-                // Only show badge bubble if count > 0, otherwise hide
                 if(count > 0) {
                     b.classList.remove('hidden');
                     b.classList.add('scale-[1.6]');
                     setTimeout(() => b.classList.remove('scale-[1.6]'), 200);
                 } else {
-                    // Let it read 0 but keep it styled (or hide it, hiding is usually better but Rico is highly graphical)
                     b.classList.remove('hidden');
                 }
             });
@@ -772,24 +865,24 @@
             } else {
                 cart.push({name, price, img, quantity: 1});
             }
-            showToast(`S/${price.toFixed(2)} • ${name}`);
+            showToast(`S/${price.toFixed(2)} • ${name}`, "bg-green-600", "shopping_cart_checkout");
             updateCartUI();
         }
 
         function removeFromCart(index) {
             cart.splice(index, 1);
-            showToast("Producto eliminado", "bg-red-600");
+            showToast("Producto eliminado", "bg-red-600", "delete");
             updateCartUI();
         }
 
-        function showToast(msg, colorClass = "bg-green-600") {
+        function showToast(msg, colorClass = "bg-green-600", icon = "done") {
             const container = document.getElementById('toast-container');
             const toast = document.createElement('div');
             // Adding transform properties for smooth sliding
             toast.className = `${colorClass} text-white px-5 py-3 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] transform translate-y-full lg:-translate-x-full transition-all duration-300 flex items-center gap-3 font-bold border border-white/20`;
             toast.innerHTML = `
                 <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0">
-                    <span class="material-symbols-outlined text-sm">shopping_cart_checkout</span>
+                    <span class="material-symbols-outlined text-sm">${icon}</span>
                 </div>
                 <div class="drop-shadow-md text-sm">${msg}</div>
             `;
@@ -807,6 +900,90 @@
             }, 2500);
         }
         
+        // --- SECURE CHECKOUT SCRIPT ---
+        
+        // Ensure Credit Card Input is formatted securely as 0000 0000 0000 0000
+        const cardInput = document.getElementById('card-input');
+        cardInput.addEventListener('input', function(e) {
+            let input = e.target.value.replace(/\D/g, ''); // Censor anything non-digit instantly
+            input = input.substring(0, 16); 
+            let formatted = '';
+            for(let i=0; i<input.length; i++) {
+                if(i > 0 && i % 4 === 0) formatted += ' ';
+                formatted += input[i];
+            }
+            e.target.value = formatted;
+        });
+
+        // Format Expiration Date input MM/YY securely
+        const expInput = document.getElementById('exp-input');
+        expInput.addEventListener('input', function(e) {
+            let input = e.target.value.replace(/\D/g, ''); 
+            input = input.substring(0, 4);
+            if(input.length > 2) {
+                input = input.substring(0,2) + '/' + input.substring(2,4);
+            }
+            e.target.value = input;
+        });
+
+        function openCheckout() {
+            if(cart.length === 0) {
+                showToast("Tu carrito está vacío. Agrega productos primero.", "bg-red-500", "error");
+                return;
+            }
+            
+            // Set precise total inside checkout UI
+            document.getElementById('checkout-total').innerText = `S/${cartTotalVal.toFixed(2)}`;
+            
+            // Show Overlay & Box
+            const overlay = document.getElementById('checkout-overlay');
+            const box = document.getElementById('checkout-box');
+            overlay.classList.remove('opacity-0', 'pointer-events-none');
+            setTimeout(() => box.classList.remove('scale-95'), 50);
+            
+            // Close side cart under it magically
+            toggleCart();
+        }
+
+        function closeCheckout(clearCartAndSuccess = false) {
+            const overlay = document.getElementById('checkout-overlay');
+            const box = document.getElementById('checkout-box');
+            
+            // Add entry classes back for exit animation
+            box.classList.add('scale-95');
+            overlay.classList.add('opacity-0', 'pointer-events-none');
+            
+            if(clearCartAndSuccess) {
+                cart = [];
+                updateCartUI();
+                // Reset form state after transition finishes
+                setTimeout(() => {
+                    document.getElementById('checkout-success').classList.add('opacity-0', 'pointer-events-none');
+                    document.getElementById('checkout-form').reset();
+                    document.getElementById('pay-btn-text').innerText = "Autorizar Pago Seguramente";
+                    document.getElementById('pay-btn-icon').innerText = "shield";
+                    document.getElementById('pay-btn-icon').classList.remove('animate-spin');
+                }, 400);
+            }
+        }
+
+        function processPayment(e) {
+            e.preventDefault();
+            
+            // Modify button
+            const btnText = document.getElementById('pay-btn-text');
+            const btnIcon = document.getElementById('pay-btn-icon');
+            btnText.innerText = "Encriptando Transacción...";
+            btnIcon.innerText = "refresh";
+            btnIcon.classList.add('animate-spin');
+            
+            // Simulating Bank & SSL processing time (2.5 seconds)
+            setTimeout(() => {
+                const successState = document.getElementById('checkout-success');
+                successState.classList.remove('opacity-0', 'pointer-events-none');
+            }, 2500);
+        }
+
         // Initialize early UI
         updateCartUI();
     </script>
