@@ -142,6 +142,60 @@
             </div>
         </section>
 
+        <!-- Offers Carousel Section -->
+        <section class="max-w-7xl mx-auto px-6 lg:px-12 mt-12 mb-20 opacity-0 scroll-reveal" id="ofertas">
+            <div class="relative rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] bg-white/5 backdrop-blur-xl border border-white/20 h-64 md:h-80 group">
+                <!-- Slides Container -->
+                <div id="carousel-slides" class="flex transition-transform duration-700 ease-in-out h-full" style="transform: translateX(0%);">
+                    <!-- Slide 1 -->
+                    <div class="min-w-full h-full relative" style="flex: 0 0 100%;">
+                        <div class="absolute inset-0 bg-gradient-to-r from-red-600 to-red-900 opacity-80 mix-blend-multiply"></div>
+                        <img class="absolute inset-0 w-full h-full object-cover z-[-1]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB34aGp8ixrBJmxoX8pjoBxMTQe4ce0rGB84dDxq98yv1ZoocNumPd-rLDWJuCENDvuXkGgnVcTj7G1KhyjXtOAHMitKknn558h9pKuG57qZhIWLsNaTx7HmwxTztoucfYFOu5mEWrGq6jJFFsOCA-uK--E8CJ4OlUpyt03prbNgsk4JDaEqiletR-EY2ABCXfpcWsKY0m7Ps0pHElW-eJ8A5_vhtKVRjNAlCpN382QUsGYZ8Gndlni5orciNx0Paqxx3uMczvJZLM"/>
+                        <div class="relative z-10 flex flex-col justify-center h-full p-10 md:p-16">
+                            <span class="bg-yellow-brand text-navy text-xs font-black px-4 py-2 rounded-xl uppercase tracking-widest inline-block w-max mb-4 shadow-lg">Oferta del Día</span>
+                            <h3 class="text-3xl md:text-5xl lg:text-6xl font-black text-white font-headline drop-shadow-md">2x1 en Pollos Enteros</h3>
+                            <p class="text-white/90 font-body text-lg mt-2 font-medium">Solo por hoy en locales seleccionados.</p>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="min-w-full h-full relative" style="flex: 0 0 100%;">
+                        <div class="absolute inset-0 bg-gradient-to-r from-[#0a0026] to-navy opacity-80 mix-blend-multiply"></div>
+                        <img class="absolute inset-0 w-full h-full object-cover z-[-1]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh1KKR0mrf7I_Ae1CKuWF1z5QOzK9KaDWAUkGD6myWCeJnQUGb1tDy6qCa1f7pcp3j79svN8mtaJ6mOOwmu-Wd9RhQCWW4_8Vrz8NJ-4Bv1kTJ7xpGA9HqKWCU6ElNPMA2KqUv022r2TDBPHmU3fUT-Rydo84Gr-9CbwX1Qr0-5toQ0NJqyHLPv2vewbSvVDVsJQcKn3k93jwnsfbktvi3QV-Rd2QIvNChXHhSdEsLKNLpuCENHAuDAfZKr5qiCp6j68wc6s0Kfws"/>
+                        <div class="relative z-10 flex flex-col justify-center h-full p-10 md:p-16">
+                            <span class="bg-yellow-brand text-navy text-xs font-black px-4 py-2 rounded-xl uppercase tracking-widest inline-block w-max mb-4 shadow-lg">Fin de Semana</span>
+                            <h3 class="text-3xl md:text-5xl lg:text-6xl font-black text-white font-headline drop-shadow-md">-30% en Cortes Premium</h3>
+                            <p class="text-white/90 font-body text-lg mt-2 font-medium">Costillas y chuletas para tu parrilla.</p>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="min-w-full h-full relative" style="flex: 0 0 100%;">
+                        <div class="absolute inset-0 bg-gradient-to-r from-yellow-600 to-yellow-900 opacity-80 mix-blend-multiply"></div>
+                        <img class="absolute inset-0 w-full h-full object-cover z-[-1]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEkPXHhSLtxwZyVKyIpEtegpGJGZqLxpgu6B-NsgML2LWMOIfz9ZzHl6dXhElDzITS17qZvX60-n3LTNzoSQeLJ9rVAjfMQp4NbrLYacskpViWa_TCCZcYti1piy22ffyETW18TDMpDW5zaSuGy4HBk3Pgmb6I1zuNwtukFZGtxiZViICFOQyWj1rCQR0Tepu2XlletDKAjIfgZ4o4OZsqHT50Kmli9q3EW2nFD6BN_gxZJ-vSjUyG0D0Mky2Cmu40VdGD9Qr-WdE"/>
+                        <div class="relative z-10 flex flex-col justify-center h-full p-10 md:p-16">
+                            <span class="bg-navy text-yellow-brand border border-yellow-brand text-xs font-black px-4 py-2 rounded-xl uppercase tracking-widest inline-block w-max mb-4 shadow-lg">Novedad</span>
+                            <h3 class="text-3xl md:text-5xl lg:text-6xl font-black text-white font-headline drop-shadow-md">Delivery Gratis</h3>
+                            <p class="text-white/90 font-body text-lg mt-2 font-medium">Por compras mayores a S/100 en la app.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Controls -->
+                <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center hover:bg-white text-white hover:text-navy transition-all opacity-0 group-hover:opacity-100 z-20">
+                    <span class="material-symbols-outlined font-bold">arrow_back_ios_new</span>
+                </button>
+                <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center hover:bg-white text-white hover:text-navy transition-all opacity-0 group-hover:opacity-100 z-20">
+                    <span class="material-symbols-outlined font-bold">arrow_forward_ios</span>
+                </button>
+                
+                <!-- Indicators -->
+                <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20" id="carousel-indicators">
+                    <div class="w-4 h-2 rounded-full bg-white transition-all cursor-pointer"></div>
+                    <div class="w-2 h-2 rounded-full bg-white/40 transition-all cursor-pointer"></div>
+                    <div class="w-2 h-2 rounded-full bg-white/40 transition-all cursor-pointer"></div>
+                </div>
+            </div>
+        </section>
+
         <div class="max-w-7xl mx-auto px-6 lg:px-12 space-y-32 mb-32">
             <!-- Pollo Section -->
             <section class="scroll-mt-32 opacity-0 scroll-reveal" id="pollo">
@@ -279,7 +333,7 @@
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 bg-white/5 backdrop-blur-2xl rounded-[2.5rem] p-8 lg:p-10 border border-white/20 shadow-[0_30px_60px_rgba(0,0,0,0.5)] relative">
                     <div class="flex flex-col relative z-10 w-full">
-                        <button onclick="scrollToLocation()" class="bg-yellow-brand text-navy font-black text-lg px-8 py-5 rounded-2xl hover:bg-white transition-all shadow-[0_10px_30px_rgba(255,204,0,0.3)] hover:shadow-[0_15px_40px_rgba(255,255,255,0.4)] hover:-translate-y-1 font-body w-full flex items-center justify-center gap-3 mb-8 border border-yellow-brand/20">
+                        <button id="location-btn" onclick="findNearestStore()" class="bg-yellow-brand text-navy font-black text-lg px-8 py-5 rounded-2xl hover:bg-white transition-all shadow-[0_10px_30px_rgba(255,204,0,0.3)] hover:shadow-[0_15px_40px_rgba(255,255,255,0.4)] hover:-translate-y-1 font-body w-full flex items-center justify-center gap-3 mb-8 border border-yellow-brand/20">
                             <span class="material-symbols-outlined text-2xl" data-icon="my_location">my_location</span>
                             Encontrar mi tienda más cercana
                         </button>
@@ -460,20 +514,107 @@
             hiddenElements.forEach((el) => observer.observe(el));
         });
 
-        // Function connected to the Google Maps section button
-        function scrollToLocation() {
-            // Provide a subtle visual effect if map is already in view, otherwise scroll to it smoothly
-            const mapSection = document.getElementById('ubicanos');
-            mapSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Offers Carousel Logic
+        let currentSlide = 0;
+        const totalSlides = 3;
+        const carousel = document.getElementById('carousel-slides');
+        const indicators = document.getElementById('carousel-indicators').children;
+        let slideInterval;
+
+        function updateSlide() {
+            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+            Array.from(indicators).forEach((ind, i) => {
+                ind.className = i === currentSlide ? "w-4 h-2 rounded-full bg-white transition-all cursor-pointer" : "w-2 h-2 rounded-full bg-white/40 transition-all cursor-pointer";
+            });
+        }
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlide();
+            resetInterval();
+        }
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlide();
+            resetInterval();
+        }
+        function resetInterval() {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+        // Initialize carousel rotation
+        slideInterval = setInterval(nextSlide, 5000);
+
+        // Geolocation Haversine Logic
+        const stores = [
+            { name: "Rico Principal Cayma", lat: -16.3840, lon: -71.5450, addr: "Av. Ejército 1010, Cayma" },
+            { name: "Rico Mall Aventura", lat: -16.4172, lon: -71.5034, addr: "Av. Porongoche 500" },
+            { name: "Rico Cerro Colorado", lat: -16.3533, lon: -71.5645, addr: "Plaza Las Américas" },
+            { name: "Rico San Camilo", lat: -16.4019, lon: -71.5361, addr: "Calle San Camilo 100" },
+            { name: "Rico Mercaderes", lat: -16.3982, lon: -71.5368, addr: "Calle Mercaderes 100" },
+            { name: "Rico Yanahuara", lat: -16.3861, lon: -71.5434, addr: "Av. Metropolitana" }
+        ];
+
+        function haversineDistance(lat1, lon1, lat2, lon2) {
+            const R = 6371; // Radio de la Tierra en km
+            const dLat = (lat2 - lat1) * Math.PI / 180;
+            const dLon = (lon2 - lon1) * Math.PI / 180;
+            const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+                      Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+                      Math.sin(dLon/2) * Math.sin(dLon/2);
+            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+            return R * c; // Distancia en kms
+        }
+
+        function findNearestStore() {
+            const btn = document.getElementById('location-btn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = `<span class="material-symbols-outlined text-2xl animate-spin" data-icon="refresh">refresh</span> Calculando coordenadas...`;
             
-            // Add a temporary highlight class to the map iframe wrapper
-            setTimeout(() => {
-                const mapWrap = mapSection.querySelector('.group');
-                mapWrap.classList.add('shadow-[0_0_50px_rgba(255,204,0,0.6)]');
-                setTimeout(() => {
-                   mapWrap.classList.remove('shadow-[0_0_50px_rgba(255,204,0,0.6)]'); 
-                }, 1500);
-            }, 800);
+            if ("geolocation" in navigator) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    const userLat = position.coords.latitude;
+                    const userLon = position.coords.longitude;
+                    
+                    let nearestStore = null;
+                    let minDistance = Infinity;
+
+                    stores.forEach(store => {
+                        const dist = haversineDistance(userLat, userLon, store.lat, store.lon);
+                        if (dist < minDistance) {
+                            minDistance = dist;
+                            nearestStore = store;
+                        }
+                    });
+
+                    // Notificación en el botón
+                    btn.innerHTML = `<span class="material-symbols-outlined text-2xl" data-icon="check_circle">check_circle</span> Cercano: ${nearestStore.name} (${minDistance.toFixed(1)} km)`;
+                    btn.classList.add("bg-green-500", "text-white", "border-transparent", "hover:bg-green-400");
+                    btn.classList.remove("bg-yellow-brand", "text-navy", "hover:bg-white");
+                    
+                    // Alerta elegante y redirección
+                    setTimeout(() => {
+                        const confirmOpen = confirm(`¡Ubicación procesada con éxito!\n\nTu tienda Rico más cercana es:\n📍 ${nearestStore.name} (a ${minDistance.toFixed(1)} km de distancia recta).\n\n¿Deseas que abramos Google Maps para trazarte la ruta?`);
+                        if (confirmOpen) {
+                            window.open(`https://www.google.com/maps/dir/?api=1&destination=${nearestStore.lat},${nearestStore.lon}`, '_blank');
+                        }
+                        
+                        // Restaurar estatus original
+                        setTimeout(() => {
+                            btn.innerHTML = originalText;
+                            btn.classList.remove("bg-green-500", "text-white", "border-transparent", "hover:bg-green-400");
+                            btn.classList.add("bg-yellow-brand", "text-navy", "hover:bg-white");
+                        }, 5000);
+                        
+                    }, 500);
+
+                }, function(error) {
+                    alert("No pudimos obtener tu ubicación automáticamente. Asegúrate de otorgar el permiso en tu navegador.");
+                    btn.innerHTML = originalText;
+                });
+            } else {
+                alert("Tu navegador no soporta geolocalización o estás en un entorno HTTP inseguro.");
+                btn.innerHTML = originalText;
+            }
         }
     </script>
 </body>
