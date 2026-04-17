@@ -85,13 +85,14 @@
             user-select: none;
         }
 
-        /* PERMANENT KNIFE CURSOR SYSTEM */
-        /* Overrides white hand pointer fully and completely across all elements */
-        * {
-            cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='40' viewBox='0 -960 960 960' width='40' fill='%23ffffff'><path d='M200-120v-555L311-880h449v580H460v180H200ZM280-380h400v-309l0-1 0 1-52-111H340l-60 110v310ZM600-480q17 0 28.5-11.5T640-520q0-17-11.5-28.5T600-560q-17 0-28.5 11.5T560-520q0 17 11.5 28.5T600-480ZM280-690l0 1 0-1v310-310Z'/></svg>") 4 4, auto !important;
+        /* KNIFE CURSOR: DESKTOP ONLY */
+        @media (hover: hover) and (pointer: fine) {
+            * {
+                cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='40' viewBox='0 -960 960 960' width='40' fill='%23ffffff'><path d='M200-120v-555L311-880h449v580H460v180H200ZM280-380h400v-309l0-1 0 1-52-111H340l-60 110v310ZM600-480q17 0 28.5-11.5T640-520q0-17-11.5-28.5T600-560q-17 0-28.5 11.5T560-520q0 17 11.5 28.5T600-480ZM280-690l0 1 0-1v310-310Z'/></svg>") 4 4, auto !important;
+            }
         }
 
-        /* Click visual effect container */
+        /* Click visual effect container (desktop only) */
         .slash-particle {
             position: fixed;
             pointer-events: none;
@@ -102,6 +103,45 @@
             border-radius: 50%;
             box-shadow: 0 0 15px rgba(255,204,0,0.8);
             transform-origin: center;
+        }
+
+        /* Mobile Bottom Nav */
+        #mobile-bottom-nav {
+            display: none;
+        }
+        @media (max-width: 1023px) {
+            #mobile-bottom-nav {
+                display: flex;
+            }
+        }
+        #mobile-bottom-nav a {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
+            padding: 8px 4px;
+            color: rgba(255,255,255,0.55);
+            font-size: 9px;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        #mobile-bottom-nav a .material-symbols-outlined {
+            font-size: 22px;
+            transition: color 0.2s;
+        }
+        #mobile-bottom-nav a:active,
+        #mobile-bottom-nav a.active {
+            color: #ffcc00;
+        }
+        #mobile-bottom-nav a:active .material-symbols-outlined,
+        #mobile-bottom-nav a.active .material-symbols-outlined {
+            color: #ffcc00;
         }
     </style>
 </head>
@@ -134,12 +174,7 @@
     </div>
     <div class="fixed inset-0 z-[-1] bg-gradient-to-b from-transparent to-navy/70 pointer-events-none mix-blend-multiply"></div>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/51999999999" target="_blank" rel="noopener noreferrer" class="fixed bottom-24 lg:bottom-10 right-6 z-50 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-[0_15px_40px_rgba(37,211,102,0.6)] hover:scale-110 active:scale-95 transition-all group overflow-hidden">
-        <!-- Ripple ping -->
-        <div class="absolute inset-0 border-2 border-white/60 rounded-full animate-ping opacity-75"></div>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="w-9 h-9 relative z-10" alt="WhatsApp Rico Pollo">
-    </a>
+    <!-- WhatsApp Floating Button removed for better mobile UX -->
 
     <!-- SideNavBar -->
     <nav class="hidden lg:flex flex-col p-4 space-y-2 h-screen w-64 border-r border-white/10 bg-navy/80 xl:bg-navy/40 backdrop-blur-xl text-white sticky top-0 shrink-0 shadow-[20px_0_40px_rgba(0,0,0,0.3)] z-40">
@@ -194,7 +229,7 @@
     </nav>
 
     <!-- Main Content -->
-    <main class="flex-1 min-w-0 pb-28 md:pb-12">
+    <main class="flex-1 min-w-0 pb-20 lg:pb-12">
         <!-- TopNavBar (Mobile) -->
         <header class="fixed top-0 w-full z-40 bg-navy/80 backdrop-blur-xl border-b border-white/10 shadow-lg lg:hidden transition-all h-24">
             <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-full">
@@ -743,6 +778,31 @@
         </div>
     </main>
 
+    <!-- Mobile Bottom Navigation Bar -->
+    <nav id="mobile-bottom-nav" class="fixed bottom-0 left-0 right-0 z-50 bg-navy/95 backdrop-blur-xl border-t border-white/10 shadow-[0_-10px_30px_rgba(0,0,0,0.4)]">
+        <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+            <span class="material-symbols-outlined">home</span>
+            Inicio
+        </a>
+        <a href="#pollo">
+            <span class="material-symbols-outlined">restaurant</span>
+            Pollo
+        </a>
+        <a href="#cerdo">
+            <span class="material-symbols-outlined">kebab_dining</span>
+            Cerdo
+        </a>
+        <a href="#ubicanos">
+            <span class="material-symbols-outlined">location_on</span>
+            Tiendas
+        </a>
+        <button onclick="toggleCart()" style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:8px 4px;background:none;border:none;color:rgba(255,255,255,0.55);font-size:9px;font-weight:700;font-family:'Poppins',sans-serif;text-transform:uppercase;letter-spacing:0.05em;position:relative;">
+            <span class="material-symbols-outlined" style="font-size:22px;">shopping_cart</span>
+            <span style="font-size:9px;font-weight:700;">Carrito</span>
+            <span class="cart-badge" style="position:absolute;top:4px;right:calc(50% - 18px);background:#dc2626;color:#fff;font-size:10px;font-weight:900;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid #0a0026;">0</span>
+        </button>
+    </nav>
+
     <!-- Side Cart Panel -->
     <div id="cart-overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[80] opacity-0 pointer-events-none transition-opacity duration-300" onclick="toggleCart()"></div>
     <div id="cart-panel" class="fixed top-0 right-0 h-full w-full max-w-sm sm:max-w-md bg-navy/95 backdrop-blur-3xl z-[90] border-l border-white/20 shadow-[-20px_0_50px_rgba(0,0,0,0.8)] transform translate-x-full transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col font-body">
@@ -799,25 +859,23 @@
     </div>
 
     <!-- Toast Notification Container -->
-    <div id="toast-container" class="fixed top-24 right-4 lg:top-auto lg:bottom-6 lg:left-6 lg:right-auto z-[80] flex flex-col gap-2 md:gap-3 pointer-events-none"></div>
+    <div id="toast-container" class="fixed top-28 right-3 lg:top-auto lg:bottom-24 lg:left-6 lg:right-auto z-[80] flex flex-col gap-2 pointer-events-none max-w-[220px] lg:max-w-xs"></div>
 
     <script>
-        // --- CUSTOM CURSOR CLICK SLASH ---
-        // Generates the slashing particle on every click
-        document.addEventListener('mousedown', (e) => {
-            const slash = document.createElement('div');
-            slash.className = 'slash-particle animate-slice-fade';
-            // Center the slash on the exact click spot
-            slash.style.left = `${e.clientX - 40}px`;
-            slash.style.top = `${e.clientY - 2}px`;
-            
-            // Randomize angle to make it feel like organic slashes
-            const angle = Math.floor(Math.random() * 360);
-            slash.style.transform = `rotate(${angle}deg)`;
-            
-            document.body.appendChild(slash);
-            setTimeout(() => slash.remove(), 400); // Life span
-        });
+        // --- CUSTOM CURSOR CLICK SLASH (DESKTOP ONLY) ---
+        const isTouch = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+        if (!isTouch) {
+            document.addEventListener('mousedown', (e) => {
+                const slash = document.createElement('div');
+                slash.className = 'slash-particle animate-slice-fade';
+                slash.style.left = `${e.clientX - 40}px`;
+                slash.style.top = `${e.clientY - 2}px`;
+                const angle = Math.floor(Math.random() * 360);
+                slash.style.transform = `rotate(${angle}deg)`;
+                document.body.appendChild(slash);
+                setTimeout(() => slash.remove(), 400);
+            });
+        }
 
         // --- PRELOADER LOGIC ---
         window.addEventListener('load', () => {
