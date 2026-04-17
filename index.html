@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rico - El Maestro Carnicero | Arequipa</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&amp;family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "navy": "#1a0066",
+                        "yellow-brand": "#ffcc00",
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Montserrat", "sans-serif"],
+                        "body": ["Poppins", "sans-serif"],
+                        "label": ["Poppins", "sans-serif"]
+                    },
+                    "keyframes": {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    },
+                    "animation": {
+                        'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-wavy-pattern {
+            background-image: radial-gradient(circle at 100% 50%, transparent 20%, #1a0066 21%, #1a0066 34%, transparent 35%, transparent),
+                              radial-gradient(circle at 0% 50%, transparent 20%, #1a0066 21%, #1a0066 34%, transparent 35%, transparent);
+            background-size: 100px 200px;
+            background-color: #0f003d;
+        }
+    </style>
+</head>
+<body class="bg-navy bg-wavy-pattern text-white font-body antialiased flex relative min-h-screen">
+<!-- Fixed Background Overlay for extra vibrancy -->
+<div class="fixed inset-0 z-[-1] bg-gradient-to-br from-navy via-navy/95 to-[#0a0026] pointer-events-none">
+<div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-yellow-brand/20 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-blue-600/20 rounded-full blur-[150px]"></div>
+</div>
+<!-- SideNavBar -->
+<nav class="hidden lg:flex flex-col p-4 space-y-2 h-screen w-64 border-r border-white/10 bg-navy/40 backdrop-blur-xl text-white sticky top-0 shrink-0 shadow-2xl z-40">
+<div class="mb-8 px-4 py-2">
+<img alt="Rico Logo" class="h-16 w-auto mb-2 object-contain drop-shadow-lg" src="https://lh3.googleusercontent.com/aida/ADBb0ujCEg1tTzCdjF9WW9e0XebstbuW5EF_rt15Od_YrP8BdJSJkD14V2KsVYB5hHo7nvRR1xwayhBc0FvLmxNHkw_F3y5AhNWqObTyvfMrvbPz5cp7-zR-tUWwVW8l_wMVKRrjbiPMYnJz4hSyW7XYfX1i6xufZej698MMSHS4h_-ih5zNfwE5XZywxxrixiCMmBUxXjIMGYssKSBtMoNjhS5mBQhew_dxLh58EqHjbrFdSMFxYxP9HCWeG32sP3bueKMCd63_4bU5"/>
+</div>
+<div class="flex-1 space-y-3">
+<a class="bg-yellow-brand text-navy rounded-xl font-bold flex items-center px-4 py-3 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,204,0,0.5)] transition-all tap-highlight-none" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="home">home</span>
+<span class="font-body text-base">Inicio</span>
+</a>
+<a class="text-white/70 hover:bg-white/10 hover:text-white flex items-center px-4 py-3 hover:translate-x-2 transition-all tap-highlight-none rounded-xl font-body text-base" href="#pollo">
+<span class="material-symbols-outlined mr-3" data-icon="restaurant">restaurant</span>
+<span>Pollo</span>
+</a>
+<a class="text-white/70 hover:bg-white/10 hover:text-white flex items-center px-4 py-3 hover:translate-x-2 transition-all tap-highlight-none rounded-xl font-body text-base" href="#cerdo">
+<span class="material-symbols-outlined mr-3" data-icon="kebab_dining">kebab_dining</span>
+<span>Cerdo</span>
+</a>
+<a class="text-white/70 hover:bg-white/10 hover:text-white flex items-center px-4 py-3 hover:translate-x-2 transition-all tap-highlight-none rounded-xl font-body text-base" href="#ubicanos">
+<span class="material-symbols-outlined mr-3" data-icon="location_on">location_on</span>
+<span>Ubícanos</span>
+</a>
+<a class="text-white/70 hover:bg-white/10 hover:text-white flex items-center px-4 py-3 hover:translate-x-2 transition-all tap-highlight-none rounded-xl font-body text-base" href="#proveedor">
+<span class="material-symbols-outlined mr-3" data-icon="handshake">handshake</span>
+<span>Hazte Proveedor</span>
+</a>
+</div>
+<div class="mt-auto pb-4">
+<button class="w-full bg-yellow-brand text-navy font-bold rounded-xl py-4 px-4 hover:scale-105 hover:shadow-[0_0_20px_rgba(255,204,0,0.4)] transition-all font-body">
+                Ver Carrito
+            </button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-1 min-w-0 pb-24 md:pb-0">
+<!-- TopNavBar (Mobile mainly, but structured as per JSON) -->
+<header class="fixed top-0 w-full z-50 bg-navy/60 backdrop-blur-xl border-b border-white/10 shadow-lg lg:hidden">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
+<div class="flex items-center">
+<img alt="Rico Logo" class="h-12 w-auto object-contain drop-shadow-md" src="https://lh3.googleusercontent.com/aida/ADBb0ujCEg1tTzCdjF9WW9e0XebstbuW5EF_rt15Od_YrP8BdJSJkD14V2KsVYB5hHo7nvRR1xwayhBc0FvLmxNHkw_F3y5AhNWqObTyvfMrvbPz5cp7-zR-tUWwVW8l_wMVKRrjbiPMYnJz4hSyW7XYfX1i6xufZej698MMSHS4h_-ih5zNfwE5XZywxxrixiCMmBUxXjIMGYssKSBtMoNjhS5mBQhew_dxLh58EqHjbrFdSMFxYxP9HCWeG32sP3bueKMCd63_4bU5"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-yellow-brand scale-95 active:scale-90 transition-all hover:text-white">
+<span class="material-symbols-outlined text-3xl" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative pt-28 lg:pt-12 pb-16 px-6 lg:px-12 max-w-7xl mx-auto mt-4 lg:mt-0 opacity-0 animate-fade-in-up" style="animation-delay: 0.1s;">
+<div class="rounded-[2.5rem] bg-white/5 backdrop-blur-md border border-white/20 overflow-hidden relative min-h-[450px] flex items-center shadow-[0_20px_50px_rgba(0,0,0,0.5)] group">
+<!-- Background image overlay with blend mode -->
+<div class="absolute inset-0 opacity-50 mix-blend-overlay group-hover:scale-105 transition-transform duration-1000">
+<img alt="Fresh ingredients" class="w-full h-full object-cover" data-alt="Dark moody top-down shot of premium raw meats, fresh herbs, garlic, and peppercorns on dark slate artisan background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEkPXHhSLtxwZyVKyIpEtegpGJGZqLxpgu6B-NsgML2LWMOIfz9ZzHl6dXhElDzITS17qZvX60-n3LTNzoSQeLJ9rVAjfMQp4NbrLYacskpViWa_TCCZcYti1piy22ffyETW18TDMpDW5zaSuGy4HBk3Pgmb6I1zuNwtukFZGtxiZViICFOQyWj1rCQR0Tepu2XlletDKAjIfgZ4o4OZsqHT50Kmli9q3EW2nFD6BN_gxZJ-vSjUyG0D0Mky2Cmu40VdGD9Qr-WdE"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-transparent"></div>
+<div class="relative z-10 p-8 md:p-16 max-w-2xl">
+<div class="inline-flex items-center gap-2 bg-yellow-brand text-navy px-4 py-1.5 rounded-full text-sm font-bold tracking-widest mb-6 font-body uppercase shadow-[0_0_15px_rgba(255,204,0,0.3)]">
+<span class="material-symbols-outlined text-sm" data-icon="local_shipping">local_shipping</span>
+                         Envío Rápido
+                     </div>
+<h2 class="text-4xl md:text-6xl lg:text-7xl font-black text-white font-headline leading-tight mb-6 tracking-tighter drop-shadow-lg">
+                         Compra Rico sin salir de casa
+                     </h2>
+<p class="text-lg md:text-xl text-white/80 font-body mb-10 max-w-xl leading-relaxed font-light">
+                         Pollo, cerdo y más productos frescos directo a tu hogar en Arequipa. Calidad premium desde 1967.
+                     </p>
+<button class="bg-yellow-brand text-navy hover:bg-yellow-400 font-black font-headline text-lg py-4 px-10 rounded-2xl transition-all shadow-[0_10px_30px_rgba(255,204,0,0.4)] hover:shadow-[0_15px_40px_rgba(255,204,0,0.6)] hover:-translate-y-1 flex items-center gap-3 group/btn">
+                         Comprar Ahora
+                         <span class="material-symbols-outlined group-hover/btn:translate-x-2 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Decorative element breaking layout -->
+<div class="hidden lg:block absolute -bottom-20 -right-20 w-[500px] h-[500px] bg-yellow-brand rounded-full blur-[100px] opacity-20 pointer-events-none"></div>
+</div>
+</section>
+<!-- Product Sections -->
+<div class="max-w-7xl mx-auto px-6 lg:px-12 space-y-32 mb-32">
+<!-- Pollo Section -->
+<section class="scroll-mt-32 opacity-0 animate-fade-in-up" id="pollo" style="animation-delay: 0.2s;">
+<div class="flex items-end justify-between mb-12">
+<div>
+<h3 class="text-4xl font-black font-headline text-white mb-3 drop-shadow-md">Pollo</h3>
+<p class="text-white/70 font-body text-lg">Frescura garantizada cada día.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+<!-- Product Card -->
+<div class="bg-white/10 backdrop-blur-lg rounded-[2rem] overflow-hidden group hover:scale-[1.03] transition-all duration-300 relative border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:shadow-[0_20px_50px_rgba(255,204,0,0.15)] flex flex-col">
+<div class="h-72 overflow-hidden relative bg-white/5 p-6 flex items-center justify-center">
+<img alt="Pollo Entero" class="w-full h-full object-cover rounded-2xl shadow-2xl group-hover:scale-110 transition-transform duration-700" data-alt="High quality top-down shot of a fresh raw whole chicken on dark premium butcher paper with sprigs of rosemary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB34aGp8ixrBJmxoX8pjoBxMTQe4ce0rGB84dDxq98yv1ZoocNumPd-rLDWJuCENDvuXkGgnVcTj7G1KhyjXtOAHMitKknn558h9pKuG57qZhIWLsNaTx7HmwxTztoucfYFOu5mEWrGq6jJFFsOCA-uK--E8CJ4OlUpyt03prbNgsk4JDaEqiletR-EY2ABCXfpcWsKY0m7Ps0pHElW-eJ8A5_vhtKVRjNAlCpN382QUsGYZ8Gndlni5orciNx0Paqxx3uMczvJZLM"/>
+<div class="absolute top-6 left-6 bg-yellow-brand text-navy text-xs font-black px-3 py-1.5 rounded-md uppercase tracking-widest font-body shadow-lg">Destacado</div>
+</div>
+<div class="p-8 flex-1 flex flex-col justify-between bg-gradient-to-b from-transparent to-black/20">
+<h4 class="text-2xl font-bold font-headline text-white mb-2">Pollo entero</h4>
+<div class="flex items-center justify-between mt-6">
+<div class="font-headline font-black text-3xl text-yellow-brand drop-shadow-sm">
+<span class="text-base text-white/50 mr-1">S/</span>12<span class="text-sm font-medium text-white/50 ml-1">x kg</span>
+</div>
+<button class="bg-yellow-brand text-navy w-14 h-14 rounded-full flex items-center justify-center hover:bg-white hover:scale-110 transition-all shadow-lg hover:shadow-[0_0_20px_rgba(255,204,0,0.5)]">
+<span class="material-symbols-outlined text-2xl" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card -->
+<div class="bg-white/10 backdrop-blur-lg rounded-[2rem] overflow-hidden group hover:scale-[1.03] transition-all duration-300 relative border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:shadow-[0_20px_50px_rgba(255,204,0,0.15)] flex flex-col">
+<div class="h-72 overflow-hidden relative bg-white/5 p-6 flex items-center justify-center">
+<img alt="Pechuga de Pollo" class="w-full h-full object-cover rounded-2xl shadow-2xl group-hover:scale-110 transition-transform duration-700" data-alt="Close up of fresh raw chicken breasts arranged beautifully on a dark slate board with subtle dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2cxJjN0rBwQfI7DgY5oagzbeaGhWrQDqVyYZGx13o8te5eIh_Y_0_8UHReMsLG2UG-1uvD0LCIzEOWuE6kcfKCFj0dT4RDsRONQ-O4_fA12wLRR1jVNKLRfcm23z5hmBgeROVYHCNuRWPnzeDj4sGI53R286pxuerqcNy9qg8YjCaztLSP2x9mJ3larjM2ctu_RrUIWvPp2sA_Pl9mDbvatwzbu3kRt62t8z7Hzg3gOgYXCOE84orgzA8AhGg5Bujg9tsdts9rO4"/>
+</div>
+<div class="p-8 flex-1 flex flex-col justify-between bg-gradient-to-b from-transparent to-black/20">
+<h4 class="text-2xl font-bold font-headline text-white mb-2">Pechuga</h4>
+<div class="flex items-center justify-between mt-6">
+<div class="font-headline font-black text-3xl text-yellow-brand drop-shadow-sm">
+<span class="text-base text-white/50 mr-1">S/</span>18<span class="text-sm font-medium text-white/50 ml-1">x kg</span>
+</div>
+<button class="bg-yellow-brand text-navy w-14 h-14 rounded-full flex items-center justify-center hover:bg-white hover:scale-110 transition-all shadow-lg hover:shadow-[0_0_20px_rgba(255,204,0,0.5)]">
+<span class="material-symbols-outlined text-2xl" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card -->
+<div class="bg-white/10 backdrop-blur-lg rounded-[2rem] overflow-hidden group hover:scale-[1.03] transition-all duration-300 relative border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:shadow-[0_20px_50px_rgba(255,204,0,0.15)] flex flex-col">
+<div class="h-72 overflow-hidden relative bg-white/5 p-6 flex items-center justify-center">
+<img alt="Muslos de Pollo" class="w-full h-full object-cover rounded-2xl shadow-2xl group-hover:scale-110 transition-transform duration-700" data-alt="Raw chicken thighs bone-in skin-on presented elegantly on a wooden cutting board with rustic styling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDYMudv3j7O-Ar3pEELcGPbeGtAh3pr9KAWDyxqfTCiVmzgdS_HL2BNzt91vJI-38uuNzd9d_2_2K3pT9hJsYheop3QeS_EOiPvAlCsI09FeUnmNeq2CgOKn41YOYt-8XvlmbylAvmVY2t8i3cAaDtXXZb3b3EuNLRokHdd-pU74z87G4oWPWqZnaeZCW0MErkPJy1NpxEOv5p8bQ2rofVWyu0_Lb7jYdZ0W7TRXYAdw6wx-e8zhqW2NWOouijpNA9QzfTIAmEUmE"/>
+</div>
+<div class="p-8 flex-1 flex flex-col justify-between bg-gradient-to-b from-transparent to-black/20">
+<h4 class="text-2xl font-bold font-headline text-white mb-2">Muslos</h4>
+<div class="flex items-center justify-between mt-6">
+<div class="font-headline font-black text-3xl text-yellow-brand drop-shadow-sm">
+<span class="text-base text-white/50 mr-1">S/</span>14<span class="text-sm font-medium text-white/50 ml-1">x kg</span>
+</div>
+<button class="bg-yellow-brand text-navy w-14 h-14 rounded-full flex items-center justify-center hover:bg-white hover:scale-110 transition-all shadow-lg hover:shadow-[0_0_20px_rgba(255,204,0,0.5)]">
+<span class="material-symbols-outlined text-2xl" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Cerdo Section (Bento Style Layout) -->
+<section class="scroll-mt-32 opacity-0 animate-fade-in-up" id="cerdo" style="animation-delay: 0.3s;">
+<div class="flex items-end justify-between mb-12">
+<div>
+<h3 class="text-4xl font-black font-headline text-white mb-3 drop-shadow-md">Cerdo</h3>
+<p class="text-white/70 font-body text-lg">Cortes selectos para tus mejores platillos.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<!-- Large Feature Card -->
+<div class="lg:col-span-7 bg-white/10 backdrop-blur-lg rounded-[2.5rem] p-10 flex flex-col md:flex-row items-center gap-10 border border-white/20 relative overflow-hidden group hover:shadow-[0_20px_50px_rgba(255,204,0,0.15)] transition-all duration-500 hover:scale-[1.02]">
+<div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none"></div>
+<div class="w-full md:w-1/2 h-72 md:h-full relative rounded-[2rem] overflow-hidden shadow-2xl z-10">
+<img alt="Costillas de Cerdo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Premium rack of raw pork ribs perfectly butchered resting on a dark rustic surface with side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh1KKR0mrf7I_Ae1CKuWF1z5QOzK9KaDWAUkGD6myWCeJnQUGb1tDy6qCa1f7pcp3j79svN8mtaJ6mOOwmu-Wd9RhQCWW4_8Vrz8NJ-4Bv1kTJ7xpGA9HqKWCU6ElNPMA2KqUv022r2TDBPHmU3fUT-Rydo84Gr-9CbwX1Qr0-5toQ0NJqyHLPv2vewbSvVDVsJQcKn3k93jwnsfbktvi3QV-Rd2QIvNChXHhSdEsLKNLpuCENHAuDAfZKr5qiCp6j68wc6s0Kfws"/>
+</div>
+<div class="w-full md:w-1/2 z-10 space-y-5">
+<div class="inline-flex bg-yellow-brand text-navy text-xs font-black px-3 py-1.5 rounded-md uppercase tracking-widest font-body shadow-md">Ideal para Parrilla</div>
+<h4 class="text-4xl font-black font-headline text-white drop-shadow-sm">Costillas</h4>
+<p class="text-white/80 font-body text-base leading-relaxed line-clamp-3">Corte premium con el balance perfecto de carne y grasa para un sabor inigualable.</p>
+<div class="flex items-center justify-between mt-8 pt-6 border-t border-white/10">
+<div class="font-headline font-black text-4xl text-yellow-brand drop-shadow-sm">
+<span class="text-xl text-white/50 mr-1">S/</span>22<span class="text-base font-medium text-white/50 ml-1">x kg</span>
+</div>
+<button class="bg-yellow-brand text-navy font-black text-lg px-8 py-4 rounded-2xl hover:bg-white transition-all shadow-[0_10px_20px_rgba(255,204,0,0.3)] hover:shadow-[0_15px_30px_rgba(255,204,0,0.5)] hover:-translate-y-1 font-body">
+                                    Agregar
+                                </button>
+</div>
+</div>
+</div>
+<!-- Standard Card -->
+<div class="lg:col-span-5 bg-white/10 backdrop-blur-lg rounded-[2.5rem] p-10 border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.3)] flex flex-col group hover:scale-[1.03] transition-all duration-500 hover:shadow-[0_20px_50px_rgba(255,204,0,0.15)] relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/30 pointer-events-none"></div>
+<div class="h-64 overflow-hidden relative rounded-[2rem] mb-8 flex-shrink-0 shadow-2xl z-10">
+<img alt="Chuleta de Cerdo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Thick cut raw pork chops beautifully marbled sitting on butcher paper with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbRPfejbEwUVsNK5_9UvkaamWkdmRTzTd2Xdny6PpNqIB8kt6C-o1OoGebDeFRYkSZaCIemRQl0bWHl7Gkqzfw20HshVHQTsM3Qt78B-uiPL_VMmWVGpAlQON32ZPDuOEd1MXVCClO0TD4i3FYMLlWeuHohY4WgNdAjOsE_E7-ajTG10A0t8pyLJNK073dhZr_c9dsBMvMrOSmzYvSoGq6JIE3QL32DfpQwlWLvi0dYGXk2SCR8N6X9wFQdUoqPpXMxRyk332A8Us"/>
+</div>
+<div class="flex flex-col flex-grow justify-between z-10">
+<div>
+<h4 class="text-3xl font-black font-headline text-white mb-3">Chuleta</h4>
+<p class="text-white/80 font-body text-base">Corte clásico, tierno y jugoso.</p>
+</div>
+<div class="flex items-center justify-between mt-8">
+<div class="font-headline font-black text-4xl text-yellow-brand drop-shadow-sm">
+<span class="text-xl text-white/50 mr-1">S/</span>20<span class="text-base font-medium text-white/50 ml-1">x kg</span>
+</div>
+<button class="bg-yellow-brand text-navy w-16 h-16 rounded-full flex items-center justify-center hover:bg-white hover:scale-110 transition-all shadow-[0_10px_20px_rgba(255,204,0,0.3)] hover:shadow-[0_15px_30px_rgba(255,204,0,0.5)]">
+<span class="material-symbols-outlined text-3xl" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Ubícanos Section -->
+<section class="scroll-mt-32 opacity-0 animate-fade-in-up" id="ubicanos" style="animation-delay: 0.4s;">
+<div class="flex items-end justify-between mb-12">
+<div>
+<h3 class="text-4xl font-black font-headline text-white mb-3 drop-shadow-md">Ubícanos</h3>
+<p class="text-white/70 font-body text-lg">Encuentra tu tienda Rico más cercana en Arequipa.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-10 bg-white/10 backdrop-blur-lg rounded-[2.5rem] p-10 border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.3)] relative overflow-hidden">
+<div class="absolute -top-40 -left-40 w-96 h-96 bg-blue-600/30 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="flex flex-col relative z-10">
+<button class="bg-yellow-brand text-navy font-black text-lg px-8 py-5 rounded-2xl hover:bg-white transition-all shadow-[0_10px_30px_rgba(255,204,0,0.3)] hover:shadow-[0_15px_40px_rgba(255,204,0,0.5)] hover:-translate-y-1 font-body w-full flex items-center justify-center gap-3 mb-10">
+<span class="material-symbols-outlined text-2xl" data-icon="my_location">my_location</span>
+                        Encontrar mi tienda más cercana
+                    </button>
+<h4 class="text-2xl font-black font-headline text-white mb-6">Nuestras Tiendas</h4>
+<ul class="space-y-4 flex-1">
+<li class="flex gap-5 p-5 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-yellow-brand/50 transition-all hover:-translate-y-1 group">
+<span class="material-symbols-outlined text-yellow-brand mt-1 text-3xl group-hover:scale-110 transition-transform" data-icon="store">store</span>
+<div>
+<h5 class="font-bold font-headline text-lg text-white">Rico Principal Cayma</h5>
+<p class="text-white/70 font-body mt-1">Av. Ejército 1010, Cayma</p>
+</div>
+</li>
+<li class="flex gap-5 p-5 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-yellow-brand/50 transition-all hover:-translate-y-1 group">
+<span class="material-symbols-outlined text-yellow-brand mt-1 text-3xl group-hover:scale-110 transition-transform" data-icon="store">store</span>
+<div>
+<h5 class="font-bold font-headline text-lg text-white">Rico Mall Aventura</h5>
+<p class="text-white/70 font-body mt-1">Av. Porongoche 500, Paucarpata</p>
+</div>
+</li>
+<li class="flex gap-5 p-5 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-yellow-brand/50 transition-all hover:-translate-y-1 group">
+<span class="material-symbols-outlined text-yellow-brand mt-1 text-3xl group-hover:scale-110 transition-transform" data-icon="store">store</span>
+<div>
+<h5 class="font-bold font-headline text-lg text-white">Rico Cerro Colorado</h5>
+<p class="text-white/70 font-body mt-1">Plaza Las Américas S/N</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="h-80 lg:h-auto min-h-[400px] bg-white/5 backdrop-blur-md rounded-[2rem] flex items-center justify-center border border-white/20 overflow-hidden relative shadow-inner z-10 group">
+<!-- Placeholder for map -->
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
+<span class="material-symbols-outlined text-8xl text-yellow-brand drop-shadow-[0_10px_20px_rgba(255,204,0,0.4)] z-10 group-hover:scale-110 transition-transform duration-500" data-icon="map">map</span>
+<div class="absolute bottom-6 left-6 right-6 bg-navy/80 backdrop-blur-xl p-4 rounded-xl text-center text-sm font-bold text-white border border-white/10 shadow-lg">
+                    Mapa de ubicaciones
+                </div>
+</div>
+</div>
+</section>
+<!-- Hazte Proveedor Section -->
+<section class="scroll-mt-32 opacity-0 animate-fade-in-up" id="proveedor" style="animation-delay: 0.5s;">
+<div class="flex items-end justify-between mb-12">
+<div>
+<h3 class="text-4xl font-black font-headline text-white mb-3 drop-shadow-md">Hazte Proveedor</h3>
+<p class="text-white/70 font-body text-lg">Únete a nuestra red de proveedores de calidad premium.</p>
+</div>
+</div>
+<div class="bg-white/10 backdrop-blur-lg rounded-[2.5rem] p-10 lg:p-16 border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.3)] relative overflow-hidden">
+<div class="absolute top-0 right-0 w-[500px] h-[500px] bg-yellow-brand/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+<form class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="md:col-span-2 mb-6">
+<h4 class="text-3xl font-black font-headline text-white mb-4">Formulario de Contacto</h4>
+<p class="text-white/80 font-body max-w-3xl text-lg leading-relaxed">Si produces con los más altos estándares de calidad y quieres ser parte de la familia Rico, completa tus datos y nos pondremos en contacto contigo a la brevedad.</p>
+</div>
+<div>
+<label class="block text-sm font-bold text-white/90 font-body mb-3 uppercase tracking-wider" for="nombre_empresa">Nombre de la Empresa</label>
+<input class="w-full bg-white/5 text-white border border-white/20 rounded-2xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-yellow-brand focus:border-yellow-brand focus:bg-white/10 font-body transition-all placeholder-white/40" id="nombre_empresa" placeholder="Ej. Granjas del Sur SAC" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-bold text-white/90 font-body mb-3 uppercase tracking-wider" for="ruc">RUC</label>
+<input class="w-full bg-white/5 text-white border border-white/20 rounded-2xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-yellow-brand focus:border-yellow-brand focus:bg-white/10 font-body transition-all placeholder-white/40" id="ruc" placeholder="10..." type="text"/>
+</div>
+<div>
+<label class="block text-sm font-bold text-white/90 font-body mb-3 uppercase tracking-wider" for="tipo_producto">Tipo de Producto</label>
+<select class="w-full bg-navy/50 text-white border border-white/20 rounded-2xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-yellow-brand focus:border-yellow-brand font-body transition-all appearance-none backdrop-blur-md" id="tipo_producto">
+<option disabled="" selected="" value="">Selecciona una opción</option>
+<option class="text-navy">Aves de corral</option>
+<option class="text-navy">Porcino</option>
+<option class="text-navy">Insumos y especias</option>
+<option class="text-navy">Empaques</option>
+<option class="text-navy">Otros</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-bold text-white/90 font-body mb-3 uppercase tracking-wider" for="telefono">Teléfono de Contacto</label>
+<input class="w-full bg-white/5 text-white border border-white/20 rounded-2xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-yellow-brand focus:border-yellow-brand focus:bg-white/10 font-body transition-all placeholder-white/40" id="telefono" placeholder="9..." type="tel"/>
+</div>
+<div class="md:col-span-2">
+<label class="block text-sm font-bold text-white/90 font-body mb-3 uppercase tracking-wider" for="mensaje">Breve descripción de tus productos</label>
+<textarea class="w-full bg-white/5 text-white border border-white/20 rounded-2xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-yellow-brand focus:border-yellow-brand focus:bg-white/10 font-body transition-all placeholder-white/40" id="mensaje" placeholder="Cuéntanos un poco sobre lo que ofreces..." rows="4"></textarea>
+</div>
+<div class="md:col-span-2 mt-6">
+<button class="bg-yellow-brand text-navy font-black text-lg px-10 py-5 rounded-2xl hover:bg-white transition-all shadow-[0_10px_30px_rgba(255,204,0,0.3)] hover:shadow-[0_15px_40px_rgba(255,204,0,0.5)] hover:-translate-y-1 font-body w-full md:w-auto flex items-center justify-center gap-3 group" type="button">
+                        Enviar Solicitud
+                        <span class="material-symbols-outlined group-hover:translate-x-2 group-hover:-translate-y-1 transition-transform" data-icon="send">send</span>
+</button>
+</div>
+</form>
+</div>
+</section>
+</div>
+</main>
+<!-- Floating Cart FAB (Mobile mainly) -->
+<button class="fixed bottom-6 right-6 lg:hidden w-16 h-16 bg-yellow-brand text-navy rounded-full shadow-[0_10px_30px_rgba(255,204,0,0.5)] flex items-center justify-center z-50 hover:scale-110 transition-transform active:scale-95 border-2 border-navy">
+<span class="material-symbols-outlined text-3xl" data-icon="shopping_cart">shopping_cart</span>
+<span class="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-black w-7 h-7 rounded-full flex items-center justify-center border-2 border-navy shadow-md">3</span>
+</button>
+</body></html>
