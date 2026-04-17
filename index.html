@@ -3,8 +3,6 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <!-- CSP Security Meta Tag (Demo Mode) -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:;">
     <title>Rico - El Maestro Carnicero | Arequipa</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
@@ -22,25 +20,6 @@
                     fontFamily: {
                         "headline": ["Montserrat", "sans-serif"],
                         "body": ["Poppins", "sans-serif"],
-                    },
-                    keyframes: {
-                        fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(40px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        },
-                        marquee: {
-                            '0%': { transform: 'translateX(0%)' },
-                            '100%': { transform: 'translateX(-50%)' }
-                        },
-                        sliceFade: {
-                            '0%': { opacity: '1', transform: 'scale(1) rotate(-45deg)' },
-                            '100%': { opacity: '0', transform: 'scale(1.5) rotate(-45deg) translate(30px, -30px)' },
-                        }
-                    },
-                    animation: {
-                        'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
-                        'marquee': 'marquee 15s linear infinite',
-                        'slice-fade': 'sliceFade 0.4s ease-out forwards'
                     }
                 }
             }
@@ -49,6 +28,29 @@
     <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(40px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes sliceFade {
+            0% { opacity: 1; transform: scale(1) rotate(-45deg); }
+            100% { opacity: 0; transform: scale(1.5) rotate(-45deg) translate(30px, -30px); }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 1 !important;
+        }
+        .animate-slice-fade {
+            animation: sliceFade 0.4s ease-out forwards;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 15s linear infinite;
         }
         
         /* Custom Scrollbar */
@@ -116,7 +118,7 @@
     <div class="fixed inset-0 z-[-1] bg-gradient-to-b from-transparent to-navy/70 pointer-events-none mix-blend-multiply"></div>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/51999999999" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 lg:bottom-10 left-6 z-50 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-[0_15px_40px_rgba(37,211,102,0.6)] hover:scale-110 active:scale-95 transition-all group overflow-hidden">
+    <a href="https://wa.me/51999999999" target="_blank" rel="noopener noreferrer" class="fixed bottom-24 lg:bottom-10 right-6 z-50 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-[0_15px_40px_rgba(37,211,102,0.6)] hover:scale-110 active:scale-95 transition-all group overflow-hidden">
         <!-- Ripple ping -->
         <div class="absolute inset-0 border-2 border-white/60 rounded-full animate-ping opacity-75"></div>
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="w-9 h-9 relative z-10" alt="WhatsApp Rico Pollo">
@@ -632,6 +634,21 @@
             carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
             Array.from(indicators).forEach((ind, i) => ind.style.opacity = i === currentSlide ? '1' : '0.4');
         }, 5000);
+        
+        // --- SCROLL REVEAL (INTERSECTION OBSERVER) ---
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in-up');
+                        entry.target.classList.remove('opacity-0');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+            document.querySelectorAll('.scroll-reveal').forEach((el) => observer.observe(el));
+        });
     </script>
 </body>
 </html>
